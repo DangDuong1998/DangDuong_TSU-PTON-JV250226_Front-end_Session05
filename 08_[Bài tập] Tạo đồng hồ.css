@@ -1,0 +1,77 @@
+.outer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border: 10px solid orange;
+    border-radius: 100%;
+    box-shadow: inset 0 0 2px 3px rgba(0, 0, 0, 0.295);
+}
+.mid{
+    position: absolute;
+    width: 15px;
+    box-shadow:  0 0 2px 3px rgba(0, 0, 0, 0.295);
+    aspect-ratio: 1 / 1;
+    background-color: orange;
+    border-radius: 100%;
+    z-index: 2;
+}
+.min_hand{
+    position: absolute;
+    width: 15px;
+    box-shadow:  0 0 2px 3px rgba(0, 0, 0, 0.295);
+    aspect-ratio: 1 / 1;
+    background-color: orange;
+    border-radius: 100%;
+}
+.min_hand::after{
+    content: '';
+    transform: translate(7.5px, 50%);
+    width: 85px;
+    height: 8px;
+    transform-origin: 0% 50%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    position: absolute;
+    background-color: black;
+    animation: minute_run 6s linear infinite;
+    z-index: 1;
+}
+@keyframes minute_run {
+    0% { transform: translate(7.5px, 50%) rotate(0deg); }
+    8.33% { transform: translate(7.5px, 50%) rotate(30deg); }
+    16.66% { transform: translate(7.5px, 50%) rotate(60deg); }
+    25% { transform: translate(7.5px, 50%) rotate(90deg); }
+    33.33% { transform: translate(7.5px, 50%) rotate(120deg); }
+    41.66% { transform: translate(7.5px, 50%) rotate(150deg); }
+    50% { transform: translate(7.5px, 50%) rotate(180deg); }
+    58.33% { transform: translate(7.5px, 50%) rotate(210deg); }
+    66.66% { transform: translate(7.5px, 50%) rotate(240deg); }
+    75% { transform: translate(7.5px, 50%) rotate(270deg); }
+    83.33% { transform: translate(7.5px, 50%) rotate(300deg); }
+    91.66% { transform: translate(7.5px, 50%) rotate(330deg); }
+    100% { transform: translate(7.5px, 50%) rotate(360deg); }
+}
+.hour_hand{
+    position: absolute;
+    width: 15px;
+    box-shadow:  0 0 2px 3px rgba(0, 0, 0, 0.295);
+    aspect-ratio: 1 / 1;
+    background-color: orange;
+    border-radius: 100%;
+}
+.hour_hand::after{
+    content: '';
+    transform: translate(7.5px, 50%);
+    width: 60px;
+    height: 8px;
+    transform-origin: 0% 50%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    position: absolute;
+    background-color: black;
+    animation: minute_run 72s linear infinite;
+    z-index: 1;
+}
