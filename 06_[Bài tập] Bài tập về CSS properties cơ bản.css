@@ -1,0 +1,83 @@
+section{
+    display:flex;
+    flex-direction: column;
+}
+.line{
+    display: flex;
+    margin-bottom: 30px;
+}
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(180, 180, 180);
+    width: 230px;
+    height: 150px;
+    margin: 30px;
+}
+
+#fade_in, #change_color{
+    transition: background-color ease 0.3s ;
+}
+#fade_in:hover{
+    transition: background-color ease 0.3s ;
+    background-color: rgb(122, 122, 122);
+}
+#change_color:hover{
+    transition: background-color ease 0.3s;
+    background-color: rgb(0, 45, 170);
+}
+#grow{
+    transition: transform ease 0.3s;
+}
+#grow:hover{
+    transition: transform ease 0.3s;
+    transform: scale(120%);
+}
+#shrink{
+    transition: transform ease 0.3s;
+}
+#shrink:hover{
+    transform: scale(80%);
+}
+#rotate:hover{
+    animation: rotate_a 0.3s;
+    transform: rotate(-35deg);
+}
+@keyframes rotate_a{
+    0% {
+        transform: rotate(0deg);
+    } 
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
+}
+#s_to_c{
+    transition: border-radius ease 0.3s;
+    border-radius: 0px;
+}
+#s_to_c:hover{
+    transition: border-radius ease 0.3s;
+    border-radius: 100%;
+}
+#i_border{
+    background-color: rgb(180, 180, 180);
+    transition: box-shadow ease 0.3s;
+}
+#i_border:hover{
+    transition: box-shadow ease 0.3s;
+    box-shadow: 0px 0px 0 13px rgb(0, 191, 255) inset;
+}
+#null{
+    background-color: transparent;
+}
